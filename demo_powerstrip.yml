@@ -1,0 +1,12 @@
+---
+  - name: Demo of Powerstrips
+    hosts: 10.67.73.52 ##specify hosts from inventory##
+    connection: local
+    gather_facts: no ##detect information about intended network devices##
+
+    - name: Identify network connection details
+      command: show network
+        register: network
+
+      -  debug:
+          msg: "{{network}}"

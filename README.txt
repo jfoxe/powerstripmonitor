@@ -1,0 +1,2 @@
+
+Power Strip Monitoring Ansible
